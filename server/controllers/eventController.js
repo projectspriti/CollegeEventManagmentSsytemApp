@@ -107,9 +107,7 @@
 const Event = require('../models/Event');
 const { validateEvent } = require('../utils/validators');
 
-// @desc    Create a new event
-// @route   POST /api/events
-// @access  Organizer/Admin
+
 const createEvent = async (req, res) => {
   const errors = validateEvent(req.body);
   if (errors.length > 0) {
